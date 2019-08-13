@@ -1,4 +1,5 @@
-#train the chatbot on the intents and Strories listed under ptsd_models
+#Train the chatbot on the intents and strories listed under ptsd_data and output the tained model to ptsd_model
+# ptsd_domain defines the universe in which the assistant works in in terms of intents, actions and template responses
 rasa train --data ./ptsd_data \
 --config ptsd_config.yml \
 --domain ptsd_domain.yml \
@@ -20,3 +21,4 @@ save examples to:
 ptsd-data/ptsd-core/stories.md
 ptsd-data/ptsd-nlu-training-data/nlu.md
 
+#more info found: https://rasa.com/docs/rasa/user-guide/rasa-tutorial/
