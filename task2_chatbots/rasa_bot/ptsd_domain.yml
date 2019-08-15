@@ -13,13 +13,39 @@ actions:
 - utter_sorry_cannot_help
 - utter_sorry_to_hear
 - utter_understand_does_not_want_help
+- utter_ptsd_evaluation
+- utter_slots_values
+slots:
+  cri_A_a:
+    type: unfeaturized
+    auto_fill: false
+  cri_A_b:
+    type: unfeaturized
+    auto_fill: false
+  traumatic_event_id:
+      type: unfeaturized
+      auto_fill: false
+entities:
+- experienced_trauma
+- is_personal_experience
+- traumatic_event_id
+forms:
+- dsm_cri_A
 intents:
 - greet
 - affirm
 - deny
 - human_handoff
 - goodbye
+- chitchat
+- startptsd
+- is_personal_experience
+- experienced_trauma
 templates:
+  utter_ask_cri_A_a:
+  - text: Do you want to talk about an event that caused you the most intense fear, helplessness, or horror?
+  utter_ask_cri_A_b:
+  - text: Did you experience it yourself?
   utter_welcome:
   - text: "Welcome!"
   utter_continue_prompt:
@@ -49,3 +75,12 @@ templates:
   - text: Sorry to hear that.
   utter_understand_does_not_want_help:
   - text: I understand. If you want to chat later, please come back.
+  utter_ptsd_evaluation:
+  - text: OK , lets start the evaluation.
+  utter_slots_values:
+    - text: "This is what i have learned about you :\n
+               - experienced a trauma: {Cri_A_a}\n
+               - traumatic event: {traumatic_event_id}\n
+               - personally experienced it : {Cri_A_b}"
+               
+               
