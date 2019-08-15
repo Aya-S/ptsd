@@ -74,4 +74,16 @@
     - utter_referral
     - action_restart
 
-## Generated Story 0
+## dsm questions
+* greet
+    - utter_greet
+    - utter_intro
+* affirm
+    - utter_get_started
+    - dsm_cri_A
+    - form{"name": "dsm_cri_A"}
+    - form{"name": null}
+    - utter_slots_values
+
+
+
