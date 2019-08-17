@@ -15,6 +15,7 @@ actions:
 - utter_understand_does_not_want_help
 - utter_ptsd_evaluation
 - utter_slots_values
+
 slots:
   cri_A_a:
     type: unfeaturized
@@ -79,8 +80,8 @@ templates:
   - text: OK , lets start the evaluation.
   utter_slots_values:
     - text: "This is what i have learned about you :\n
-               - experienced a trauma: {Cri_A_a}\n
+               - experienced a trauma: {cri_A_a}\n
                - traumatic event: {traumatic_event_id}\n
-               - personally experienced it : {Cri_A_b}"
+               - personally experienced it : {cri_A_b}"
                
                

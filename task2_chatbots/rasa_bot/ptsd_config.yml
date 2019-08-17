@@ -1,13 +1,18 @@
 language: "en"
 
 pipeline:
-- name: "SpacyNLP"
-- name: "SpacyTokenizer"
-- name: "SpacyFeaturizer"
-- name: "RegexFeaturizer"
-- name: "CRFEntityExtractor"
-- name: "EntitySynonymMapper"
-- name: "SklearnIntentClassifier"
+  - name: "SpacyNLP"
+  - name: "SpacyTokenizer"
+  - name: "SpacyFeaturizer"
+  - name: "RegexFeaturizer"
+  - name: "CRFEntityExtractor"
+  - name: "EntitySynonymMapper"
+  - name: "SklearnIntentClassifier"
+  - name: EmbeddingIntentClassifier
+  - name: DucklingHTTPExtractor
+    url: http://localhost:8000
+    dimensions:
+      - number
     
 policies:
   - name: MemoizationPolicy
