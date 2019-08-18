@@ -15,6 +15,7 @@ actions:
 - utter_understand_does_not_want_help
 - utter_ptsd_evaluation
 - utter_slots_values
+- utter_thank_you
 
 slots:
   cri_A_a:
@@ -43,6 +44,8 @@ intents:
 - is_personal_experience
 - experienced_trauma
 templates:
+  utter_thank_you:
+  - text: Thank you.
   utter_ask_cri_A_a:
   - text: Do you want to talk about an event that caused you the most intense fear, helplessness, or horror?
   utter_ask_cri_A_b:
@@ -81,7 +84,6 @@ templates:
   utter_slots_values:
     - text: "This is what i have learned about you :\n
                - experienced a trauma: {cri_A_a}\n
-               - traumatic event: {traumatic_event_id}\n
                - personally experienced it : {cri_A_b}"
                
                

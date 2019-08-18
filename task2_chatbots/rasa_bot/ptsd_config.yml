@@ -8,11 +8,7 @@ pipeline:
   - name: "CRFEntityExtractor"
   - name: "EntitySynonymMapper"
   - name: "SklearnIntentClassifier"
-  - name: EmbeddingIntentClassifier
-  - name: DucklingHTTPExtractor
-    url: http://localhost:8000
-    dimensions:
-      - number
+
     
 policies:
   - name: MemoizationPolicy

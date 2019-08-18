@@ -84,6 +84,8 @@
     - form{"name": "dsm_cri_A"}
     - form{"name": null}
     - utter_slots_values
+    - action_restart
+
 
 
 

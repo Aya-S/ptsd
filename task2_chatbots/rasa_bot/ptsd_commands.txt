@@ -6,6 +6,13 @@ rasa train --data ./ptsd_data \
 --out ptsd_models \
 --force
 
+# to start action server:
+rasa run actions
+ 
+# to start bot server and interact with bot through CLI:
+rasa shell --model ptsd_models/ --endpoints endpoints.yml
+
+
 #Run the chatbot 
 rasa shell --model ptsd_models/
 
